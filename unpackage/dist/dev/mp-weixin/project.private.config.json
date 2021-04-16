@@ -1,0 +1,47 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/tabbar/mine/index",
+          "pathName": "pages/tabbar/mine/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tabbar/home/index",
+          "pathName": "pages/tabbar/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/movieDetail/index",
+          "pathName": "pages/movieDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/index",
+          "pathName": "pages/order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/feedBack/index",
+          "pathName": "pages/feedBack/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<view class="wrap"><image class="img" src="http://api.jisuapi.com/movie/upload/movie/15/141461.jpg"></image><view data-event-opts="{{[['tap',[['switchToHome',['$event']]]]]}}" class="button" bindtap="__e"><label class="_span">立即前往</label></view></view>

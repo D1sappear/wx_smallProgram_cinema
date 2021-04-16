@@ -1,0 +1,81 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+			"path": "pages/loading/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/tabbar/home/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/tabbar/searchTheatre/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/tabbar/mine/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/findMovie/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/movieDetail/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/feedBack/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#FF9934",
+	    "borderStyle": "white",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/tabbar/home/index",
+	        "iconPath": "static/tabbarIcon/home.png",
+	        "selectedIconPath": "static/tabbarIcon/homeSelected.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/tabbar/searchTheatre/index",
+	        "iconPath": "static/tabbarIcon/theatre.png",
+	        "selectedIconPath": "static/tabbarIcon/theatreSelected.png",
+	        "text": "影院"
+	    }, {
+	        "pagePath": "pages/tabbar/mine/index",
+	        "iconPath": "static/tabbarIcon/mine.png",
+	        "selectedIconPath": "static/tabbarIcon/mineSelected.png",
+	        "text": "我的"
+	    }]
+	}
+}
