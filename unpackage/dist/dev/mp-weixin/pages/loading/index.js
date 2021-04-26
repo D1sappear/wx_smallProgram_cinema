@@ -171,7 +171,7 @@ var _default =
       uni.switchTab({
         url: '../tabbar/home/index',
         success: function success(res) {
-          console.log(res);
+          // console.log(res)
         } });
 
     } },

@@ -25,6 +25,7 @@ export default new Vuex.Store({
 		userName: '',
 		/* 用户头像 */
 		userAvatarUrl: '',
+		hasLogin: false,
 		/* 服务商 */
 		provider: '',
 		// 电影id
@@ -96,56 +97,8 @@ export default new Vuex.Store({
 		},
 		
 		
-		// 请求用户信息
-		getUserInfo(context) {
-			// 获取服务供应商
-			uni.getProvider({
-				service: 'oauth',
-				success(res) {
-					// console.log(res.provider)
-					context.state.provider = res.provider
-					// 检查 登录状态是否过期
-					uni.checkSession({
-						success(res) {
-							// console.log(res)
-							return
-						},
-						fail(err) {
-							console.log('登录已过期' + err)
-							// 请求登录
-							uni.showToast({
-								icon: 'none',
-								title: '登录已过期，请重新登录',
-								duration: 2000
-							})
-						}
-					})
-					uni.login({
-						provider: context.state.provider,
-						success(res) {
-							// console.log(res)
-							// 请求用户信息
-							uni.getUserInfo({
-								provider: context.state.provider,
-								success(res) {
-									console.log(res)
-									context.state.userName = res.userInfo.nickName
-									context.state.userAvatarUrl = res.userInfo.avatarUrl
-								},
-								fail(err) {
-									console.log('获取用户信息失败' + err)
-								}
-							})
-						},
-						fail(err) {
-							console.log('登录失败' + err)
-						}
-					})
-				},
-				fail(err) {
-					console.log('获取服务供应商失败' + err)
-				}
-			})
+		// 获取微信授权
+		loginWx(context) {
 		},
 		
 		// 获取所在城市上映的电影

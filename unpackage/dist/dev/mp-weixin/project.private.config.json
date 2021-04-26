@@ -39,6 +39,12 @@
         {
           "name": "pages/feedBack/index",
           "pathName": "pages/feedBack/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/index",
+          "pathName": "pages/login/index",
           "scene": null
         }
       ]

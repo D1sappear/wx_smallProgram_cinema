@@ -5,6 +5,11 @@ import App from './App'
 // 引入定义好的store模块
 import store from './store/index.js'
 
+// 引入分享js
+import share from './util/share.js'
+// 全局挂载使用
+Vue.mixin(share)
+
 // 引入iconfont.css文件
 import './static/font/iconfont.css'
 

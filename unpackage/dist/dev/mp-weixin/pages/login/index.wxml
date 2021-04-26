@@ -1,0 +1,1 @@
+<view class="loginView _div"><view class="container _div"><view class="card _div"><view class="content _div"><view class="_h1">登录享受服务</view><view data-event-opts="{{[['tap',[['getUserInfo',['$event']]]]]}}" class="button _div" bindtap="__e">一键登录</view></view></view></view></view>

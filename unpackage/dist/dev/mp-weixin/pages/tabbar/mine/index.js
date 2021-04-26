@@ -241,6 +241,39 @@ var _default =
       uni.navigateTo({
         url: '../../feedBack/index' });
 
+    },
+    // 去登录页
+    toLogin: function toLogin() {var _this = this;
+      // this.$store.dispatch('loginWx')
+      uni.checkSession({
+        success: function success(res) {
+          if (_this.$store.state.hasLogin == false) {
+            uni.login({
+              provider: 'weixin',
+              success: function success(res) {
+                uni.navigateTo({
+                  url: '../../login/index' });
+
+              } });
+
+          } else {
+            uni.navigateTo({
+              url: '../../logOut/index' });
+
+          }
+        },
+        fail: function fail(err) {
+          console.log('登录过期,请重新登录');
+          uni.login({
+            provider: 'weixin',
+            success: function success(res) {
+              uni.navigateTo({
+                url: '../../login/index' });
+
+            } });
+
+        } });
+
     } },
 
   onTabItemTap: function onTabItemTap(e) {
@@ -248,7 +281,6 @@ var _default =
   },
   onReady: function onReady() {
     // 加载页获取用户信息
-    this.$store.dispatch('getUserInfo');
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

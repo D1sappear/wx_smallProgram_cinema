@@ -29,7 +29,7 @@
 				uni.switchTab({
 					url: '../tabbar/home/index',
 					success(res) {
-						console.log(res)
+						// console.log(res)
 					}
 				})
 			}

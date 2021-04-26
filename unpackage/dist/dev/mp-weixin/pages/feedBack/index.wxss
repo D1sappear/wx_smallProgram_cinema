@@ -168,8 +168,7 @@
   height: 100rpx;
   line-height: 100rpx;
   background-color: #FEC284;
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
   bottom: 10rpx;
   left: 50%;
   -webkit-transform: translateX(-50%);

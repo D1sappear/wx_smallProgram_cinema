@@ -3,7 +3,7 @@
 		<!-- 头像和用户名 -->
 		<view class="top">
 			<image :src="avatarUrl " mode=""></image>
-			<view class="userName">
+			<view class="userName" @click="toLogin">
 				<span>{{userName}}</span>
 			</view>
 		</view>
@@ -109,6 +109,39 @@
 				uni.navigateTo({
 					url: '../../feedBack/index'
 				})
+			},
+			// 去登录页
+			toLogin() {
+				// this.$store.dispatch('loginWx')
+				uni.checkSession({
+					success: (res) => {
+						if(this.$store.state.hasLogin == false) {
+							uni.login({
+								provider: 'weixin',
+								success: (res) => {
+									uni.navigateTo({
+										url: '../../login/index'
+									})
+								}
+							})
+						} else {
+							uni.navigateTo({
+								url: '../../logOut/index'
+							})
+						}
+					},
+					fail: (err) => {
+						console.log('登录过期,请重新登录')
+						uni.login({
+							provider: 'weixin',
+							success: (res) => {
+								uni.navigateTo({
+									url: '../../login/index'
+								})
+							}
+						})
+					}
+				})
 			}
 		},
 		onTabItemTap (e) {
@@ -116,7 +149,6 @@
 		},
 		onReady() {
 			// 加载页获取用户信息
-			this.$store.dispatch('getUserInfo')
 		}
 	}
 </script>
